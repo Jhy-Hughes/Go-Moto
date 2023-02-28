@@ -1,13 +1,21 @@
 {
   "pages": [
-    "pages/tabbar/tabbar-1/tabbar-1",
-    "pages/tabbar/tabbar-2/tabbar-2",
+    "pages/tabbar/home/home",
+    "pages/tabbar/photo/photo",
     "pages/tabbar/tabbar-3/tabbar-3",
     "pages/tabbar/tabbar-4/tabbar-4",
     "pages/tabbar/tabbar-5/tabbar-5",
     "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
     "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
     "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa"
+  ],
+  "subPackages": [
+    {
+      "root": "sub_pages",
+      "pages": [
+        "displayarea/displayarea"
+      ]
+    }
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -22,16 +30,16 @@
     "selectedColor": "#f33e54",
     "list": [
       {
-        "pagePath": "pages/tabbar/tabbar-1/tabbar-1",
+        "pagePath": "pages/tabbar/home/home",
         "iconPath": "static/img/tabbar/home.png",
         "selectedIconPath": "static/img/tabbar/homeactive.png",
         "text": "首页"
       },
       {
-        "pagePath": "pages/tabbar/tabbar-2/tabbar-2",
+        "pagePath": "pages/tabbar/photo/photo",
         "iconPath": "static/img/tabbar/guanzhu.png",
         "selectedIconPath": "static/img/tabbar/guanzhuactive.png",
-        "text": "关注"
+        "text": "照片"
       },
       {
         "pagePath": "pages/tabbar/tabbar-3/tabbar-3",
@@ -43,13 +51,13 @@
         "pagePath": "pages/tabbar/tabbar-4/tabbar-4",
         "iconPath": "static/img/tabbar/news.png",
         "selectedIconPath": "static/img/tabbar/newsactive.png",
-        "text": "消息"
+        "text": "购物车"
       },
       {
         "pagePath": "pages/tabbar/tabbar-5/tabbar-5",
         "iconPath": "static/img/tabbar/me.png",
         "selectedIconPath": "static/img/tabbar/meactive.png",
-        "text": "我"
+        "text": "我的"
       }
     ]
   },

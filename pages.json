@@ -2,14 +2,16 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/tabbar/tabbar-1/tabbar-1",
+			"path": "pages/tabbar/home/home",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "每日精选"
 			}
 		},
 		{
-			"path": "pages/tabbar/tabbar-2/tabbar-2",
-			"style": {}
+			"path": "pages/tabbar/photo/photo",
+			"style": {
+				"navigationBarTitleText": "照片"
+			}
 		},
 		{
 			"path": "pages/tabbar/tabbar-3/tabbar-3",
@@ -17,11 +19,15 @@
 		},
 		{
 			"path": "pages/tabbar/tabbar-4/tabbar-4",
-			"style": {}
+			"style": {
+				"navigationBarTitleText": "购物车",
+				}
 		},
 		{
 			"path": "pages/tabbar/tabbar-5/tabbar-5",
-			"style": {}
+			"style": {
+				"navigationBarTitleText": "我的",
+				}
 		},
 		{
 			"path": "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
@@ -36,6 +42,22 @@
 			"style": {}
 		}
 	],
+		"subPackages": [
+			{
+				"root": "sub_pages",
+				"pages": [{
+					    "path" : "displayarea/displayarea",
+					    "style" :                                                                                    
+					{
+					    "navigationBarTitleText": "",
+					    "enablePullDownRefresh": false
+					}
+					
+					}
+
+	            ]
+			}
+		],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -48,16 +70,16 @@
 		"color": "#8F8F94",
 		"selectedColor": "#f33e54",
 		"list": [{
-				"pagePath": "pages/tabbar/tabbar-1/tabbar-1",
+				"pagePath": "pages/tabbar/home/home",
 				"iconPath": "static/img/tabbar/home.png",
 				"selectedIconPath": "static/img/tabbar/homeactive.png",
 				"text": "首页"
 			},
 			{
-				"pagePath": "pages/tabbar/tabbar-2/tabbar-2",
+				"pagePath": "pages/tabbar/photo/photo",
 				"iconPath": "static/img/tabbar/guanzhu.png",
 				"selectedIconPath": "static/img/tabbar/guanzhuactive.png",
-				"text": "关注"
+				"text": "照片"
 			},
 			//#ifdef MP-WEIXIN
 			{
@@ -78,13 +100,13 @@
 				"pagePath": "pages/tabbar/tabbar-4/tabbar-4",
 				"iconPath": "static/img/tabbar/news.png",
 				"selectedIconPath": "static/img/tabbar/newsactive.png",
-				"text": "消息"
+				"text": "购物车"
 			},
 			{
 				"pagePath": "pages/tabbar/tabbar-5/tabbar-5",
 				"iconPath": "static/img/tabbar/me.png",
 				"selectedIconPath": "static/img/tabbar/meactive.png",
-				"text": "我"
+				"text": "我的"
 			}
 		]
 	}
