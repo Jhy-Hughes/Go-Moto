@@ -3,27 +3,28 @@
 	<view class="home_background">
 
 
-			<swiper class="swiper_back" :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000"
-				circular="true">
-				<swiper-item @tap="clickSwiper()">
-					<view class="swiper_pic" @tap="clickSwiper()">
-						
-						<text>展示区todo:获取后台表格</text>
-						<!-- 					<image :src=""> </image> -->
-					</view>
-				</swiper-item>
+		<swiper class="swiper_back" :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000"
+			circular="true">
+			<swiper-item>
+				<view class="swiper_pic" @tap="clickSwiper()">
 
-
-			</swiper>
-
-			<view class="friends_message">
-
-				<view class="friends_user_message">
-					<view>
-						todo：精选照片
-					</view>
+					<text>展示区todo:获取后台表格</text>
+					<!-- 					<image :src=""> </image> -->
 				</view>
-								</view>
+			</swiper-item>
+
+
+		</swiper>
+
+		<view class="friends_message">
+
+			<view class="friends_user_message">
+				<view>
+					todo：精选照片
+				</view>
+			</view>
+		</view>
+
 
 
 	</view>
@@ -32,8 +33,8 @@
 <script>
 	export default {
 		data() {
-			return {
 
+			return {
 			}
 		},
 		methods: {
@@ -44,7 +45,7 @@
 				})
 			}
 
-      },
+		},
 	}
 </script>
 
@@ -76,6 +77,4 @@
 		flex-wrap: wrap;
 		margin: 20px;
 	}
-
-
 </style>

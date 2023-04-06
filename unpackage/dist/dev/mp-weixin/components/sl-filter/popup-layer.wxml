@@ -1,1 +1,0 @@
-<scroll-view scroll-y hidden="{{!c}}" bindtap="{{d}}" catchtouchmove="{{e}}" class="popup-layer"><view ref="popRef" class="popup-content" catchtap="{{a}}" style="{{b}}"><slot></slot></view></scroll-view>

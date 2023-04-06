@@ -1,319 +1,205 @@
 <template>
-	<view>
-		<view class="select-icon">
-          <slFilter class = "filter-data" themeColor="themeColor"  menuList="menuList"></slFilter>
-		</view>
-		<view class="select_time">
-			<view>1</view>
-			<view>2</view>
-			<view>3</view>
-			<view>4</view>
-			<view>5</view>
-		</view>
-		<view class="all-photo">
-			<view>
-<!-- 				<navigator url="../whole_message/whole_message">
-					<image src="../../static/user-active.png">
-					</image>
-				</navigator> -->
+	<view class="main_background">
+		<view class="tabTit box">
+
+			<view class="flex1" v-for="(item,index) in tabTxt" data-index={{index}} >
+				<view v-if="index == 0">
+					<picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
+						<view class="uni-input"><text>{{item}}</text></view>
+					</picker>
+				</view>
+				<view v-else-if="index == 1">
+					<picker @change="bindPickerChange" :value="place" :range="place_name">
+						<view class="uni-input"> <text>{{item}}</text></view>
+
+					</picker>
+				</view>
+				<view v-else-if="index == 2">
+					<picker @change="bindPickerChange" :value="name" :range="camerist_name">
+						<view class="uni-input"> <text>{{item}}</text></view>
+
+					</picker>
+				</view>
+				<view v-else>
+					<view class="uni-input"> <text>{{item}}</text></view>
+
+				</view>
+
+
 			</view>
 		</view>
-		
-		<view class="buy_bottom">
-		    <uni-goods-nav :fill="false" :options="options" :buttonGroup="buttonGroup" @click="onClick"
-		        @buttonClick="buttonClick" />
+
+
+		<view class="photo_display">
+			<view class="photo_message" @tap="clickSwiper()">
+				<view> 1 </view>
+
+			</view>
+			<view class="photo_message">
+				<view> 1 </view>
+
+			</view>
+			<view class="photo_message">
+				<view> 1 </view>
+
+			</view>
+
+			<view class="photo_message">
+				<view> 1 </view>
+
+			</view>
+			<view class="photo_message">
+				<view> 1 </view>
+
+			</view>
+
+
 		</view>
-		
 	</view>
+
+
+
 </template>
 
 <script>
-    import slFilter from '../../../components/sl-filter/sl-filter.vue';
-    export default {
-        components: {
-            slFilter
-        },
-        data() {
-            return {
-                themeColor: '#000000',
-                filterResult: '',
-                menuList: [{
-                        'title': '头盔',
-						'isMutiple': false,
-                        'key': 'jobType',
-                        'detailList': [{
-                                'title': '红',
-                                'value': '#FF0000 '
-                            },
-                            {
-                                'title': '绿',
-                                'value': ' #008000'
-                            },
-                            {
-                                'title': '蓝',
-                                'value': '#0000FF'
-                            },
-                            {
-                                'title': '粉',
-                                'value': '#FFC0CB'
-                            },
-                            {
-                                'title': '麦',
-                                'value': '#F5DEB3'
-                            },
-                            {
-                                'title': '黄',
-                                'value': '#F5DEB3'
-                            },
-							{
-							    'title': '白',
-							    'value': ' #FFFFFF'
-							},
-							{
-							    'title': '金',
-							    'value': '#FFD700'
-							},
-							{
-							    'title': '澄',
-							    'value': ' #FFA500'
-							}
-                        ]
-
-                    },
-                    {
-                        'title': '上衣',
-                        'key': 'salary',
-						'isMutiple': false,
-                        'detailList': [{
-                                'title': '红',
-                                'value': '#FF0000 '
-                            },
-                            {
-                                'title': '绿',
-                                'value': ' #008000'
-                            },
-                            {
-                                'title': '蓝',
-                                'value': '#0000FF'
-                            },
-                            {
-                                'title': '粉',
-                                'value': '#FFC0CB'
-                            },
-                            {
-                                'title': '麦',
-                                'value': '#F5DEB3'
-                            },
-                            {
-                                'title': '黄',
-                                'value': '#F5DEB3'
-                            },
-							{
-							    'title': '白',
-							    'value': ' #FFFFFF'
-							},
-							{
-							    'title': '金',
-							    'value': '#FFD700'
-							},
-							{
-							    'title': '澄',
-							    'value': ' #FFA500'
-							}
-                        ]
-
-                    },
-                    {
-                        'title': '裤子',
-                        'key': 'single',
-                        'isMutiple': false,
-                        'detailList': [{
-                                'title': '红',
-                                'value': '#FF0000 '
-                            },
-                            {
-                                'title': '绿',
-                                'value': ' #008000'
-                            },
-                            {
-                                'title': '蓝',
-                                'value': '#0000FF'
-                            },
-                            {
-                                'title': '粉',
-                                'value': '#FFC0CB'
-                            },
-                            {
-                                'title': '麦',
-                                'value': '#F5DEB3'
-                            },
-                            {
-                                'title': '黄',
-                                'value': '#F5DEB3'
-                            },
-							{
-							    'title': '白',
-							    'value': ' #FFFFFF'
-							},
-							{
-							    'title': '金',
-							    'value': '#FFD700'
-							},
-							{
-							    'title': '澄',
-							    'value': ' #FFA500'
-							}
-                        ]
-                    },
-					{
-					    'title': '车体',
-					    'key': 'sort',
-						'isMutiple': false,
-					    'detailList': [{
-					            'title': '红',
-					            'value': '#FF0000 '
-					        },
-					        {
-					            'title': '绿',
-					            'value': ' #008000'
-					        },
-					        {
-					            'title': '蓝',
-					            'value': '#0000FF'
-					        },
-					        {
-					            'title': '粉',
-					            'value': '#FFC0CB'
-					        },
-					        {
-					            'title': '麦',
-					            'value': '#F5DEB3'
-					        },
-					        {
-					            'title': '黄',
-					            'value': '#F5DEB3'
-					        },
-							{
-							    'title': '白',
-							    'value': ' #FFFFFF'
-							},
-							{
-							    'title': '金',
-							    'value': '#FFD700'
-							},
-							{
-							    'title': '澄',
-							    'value': ' #FFA500'
-							}
-					    ]
-					},
-					{
-					    'title': '车型',
-					    'key': 'sort',
-						'isMutiple': false,
-					    'detailList': [{
-					            'title': '杜卡迪',
-					            'value': '#FF0000 '
-					        },
-					        {
-					            'title': '川崎',
-					            'value': ' #008000'
-					        },
-					        {
-					            'title': '铃木',
-					            'value': '#0000FF'
-					        },
-					        {
-					            'title': '本田',
-					            'value': '#FFC0CB'
-					        },
-					        {
-					            'title': '哈雷',
-					            'value': '#F5DEB3'
-					        }
-					    ]
-					}
-					
-                ],
-				options: [{
-				                icon: 'home',
-				                text: '首页'
-				            }, {
-				                icon: 'chat',
-				                text: '客服',
-				                info: 2,
-				                infoBackgroundColor: '#DB0F0F',
-				                // infoColor: "red"
-				            }, {
-				                icon: 'cart',
-				                text: '购物车',
-				                info: 2,
-				                infoBackgroundColor: '#DB0F0F',
-				            }],
-				            buttonGroup: [{
-				                    text: '加入购物车',
-				                    backgroundColor: '#FC8A05',
-				                    color: '#fff'
-				                },
-				                {
-				                    text: '立即购买',
-				                    backgroundColor: '#DB0F0F',
-				                    color: '#fff'
-				                }
-				            ]
-            }
-        },
-        onLoad() {
-
-        },
-        methods: {
-            result(val) {
-                console.log('filter_result:' + JSON.stringify(val));
-                this.filterResult = JSON.stringify(val, null, 2)
-            },
-			onClick(e) {
-				// uni.showToast({
-				// 	title: `点击${e.content.icon}`,
-				// 	icon: 'none'
-				// }),
-				uni.redirectTo({
-					url:'/sub_pages/e.content.icon/${e.content.icon}'
-				})
-			},
-			buttonClick(e) {
-				console.log(e)
-				this.options[2].info++
-
+	//todo：
+	const Camerist_api = 'https://www'
+	// import axios from 'axios'
+	export default {
+		data() {
+			const currentDate = this.getDate({
+				format: true
+			})
+			return {
+				date: currentDate,
+				tabTxt: ['时间', '地点', '摄影师', '重置'], //分类
+				place_id: 0, //价格
+				place_name: ['双大陆', '首钢', '百里', '慧忠路隧道'],
+				camerist_name: ['1', '2', '3', '4', '5'],
+				pickerIndexList: [0, 0, 0], //日期选择器下标
 			}
-        }
-    }
+		},
+		computed: {
+			startDate() {
+				return this.getDate('start');
+			},
+			endDate() {
+				return this.getDate('end');
+			}
+		},
+		methods: {
+			bindPickerChange: function(e) {
+				console.log('picker发送选择改变，携带值为', e.detail.value)
+				this.index = e.detail.value
+			},
+			bindDateChange: function(e) {
+				this.date = e.detail.value
+			},
+			getDate(type) {
+				const date = new Date();
+				let year = date.getFullYear();
+				let month = date.getMonth() + 1;
+				let day = date.getDate();
+
+				if (type === 'start') {
+					year = year - 60;
+				} else if (type === 'end') {
+					year = year + 2;
+				}
+				month = month > 9 ? month : '0' + month;
+				day = day > 9 ? day : '0' + day;
+				return `${year}-${month}-${day}`;
+			},
+			clickSwiper() {
+				uni.navigateTo({
+					url: '../../../sub_pages/displayphoto/displayphoto',
+				})
+			}
+
+
+		},
+
+		onLoad() {
+			var that = this;
+
+
+		},
+
+	}
 </script>
 
-<style lang="scss">
-.select-icon{
-	display: flex;
-	height: 50px;
-}
-.select_time{
-	display: flex;
-	flex-direction: row;
-	margin: 5px;
-}
-.all-photo{
-	display: flex;
-	flex-wrap: wrap;
-}
-image{
-	height: 100px;
-	width: 200px;
-}
-.filter-data{
-	display: flex;
-	width: 500px;
-}
-.buy_bottom{
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-}
+<style>
+	.main_background {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.tabTit {
+		height: 90rpx;
+		line-height: 90rpx;
+		border-bottom: solid 1px #f5f5f5;
+		display: flex;
+		/* 		position: fixed; */
+		top: 0;
+		width: 750rpx;
+		/* 		z-index: 1; */
+		background: #ffffff;
+		font-size: 15px;
+		text-align: center;
+	}
+
+	.flex1 {
+		flex: 1;
+		text-align: center;
+		overflow: hidden;
+		display: block;
+
+	}
+
+	.message {
+		flex: 1;
+		justify-content: space-around;
+		border-width: 3px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 5px 0px lightgray;
+		/* 	display: flex;
+	align-self: center; */
+		margin-left: 5px;
+		/* 	box-shadow: lightcoral 2px;
+	border-radius: 2px;
+	border-color: bisque; */
+		text-align: center;
+	}
+
+	/*弹性盒模型*/
+	/* 	.box {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	} */
+	.photo_display {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		position: relative;
+		left: 5px;
+
+
+	}
+
+	.photo_message {
+		width: calc((100% - 25px)/4);
+		height: 100px;
+		margin-bottom: 2px;
+		margin-top: 10px;
+		margin-right: 5px;
+		border-radius: 10px;
+		box-shadow: 0px 0px 5px 0px lightgray;
+		text-align: center;
+		/* 		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0; */
+
+	}
 </style>

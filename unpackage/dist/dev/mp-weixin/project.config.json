@@ -11,6 +11,7 @@
     "minified": false,
     "newFeature": true,
     "bigPackageSizeSupport": true,
+    "ignoreUploadUnusedFiles": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -19,7 +20,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.30.2",
-  "appid": "touristappid",
+  "appid": "wx195702d2d20cd073",
   "projectname": "GO-MOTO",
   "condition": {},
   "editorSetting": {

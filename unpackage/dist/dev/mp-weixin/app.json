@@ -2,21 +2,26 @@
   "pages": [
     "pages/tabbar/home/home",
     "pages/tabbar/photo/photo",
-    "pages/tabbar/tabbar-3/tabbar-3",
-    "pages/tabbar/tabbar-4/tabbar-4",
-    "pages/tabbar/tabbar-5/tabbar-5",
-    "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
-    "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
-    "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa"
+    "pages/tabbar/cart/cart",
+    "pages/tabbar/myinfo/myinfo"
   ],
   "subPackages": [
     {
       "root": "sub_pages",
       "pages": [
-        "displayarea/displayarea"
+        "displayarea/displayarea",
+        "displayphoto/displayphoto"
       ]
     }
   ],
+  "usingComponents": {
+    "van-swipe-cell": "/node_modules/vant/lib/swipe-cell/index",
+    "van-checkbox-group": "/node_modules/vant/lib/checkbox-group/index",
+    "van-checkbox": "/node_modules/vant/lib/checkbox/index",
+    "van-submit-bar": "/node_modules/vant/lib/submit-bar/index",
+    "van-card": "/node_modules/vant/lib/card/index",
+    "van-button": "/node_modules/vant/lib/button/index"
+  },
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
@@ -24,8 +29,8 @@
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
-    "borderStyle": "black",
-    "backgroundColor": "#333",
+    "borderStyle": "white",
+    "backgroundColor": "#F8F8F8",
     "color": "#8F8F94",
     "selectedColor": "#f33e54",
     "list": [
@@ -42,24 +47,17 @@
         "text": "照片"
       },
       {
-        "pagePath": "pages/tabbar/tabbar-3/tabbar-3",
-        "iconPath": "static/img/tabbar/add.png",
-        "selectedIconPath": "static/img/tabbar/addactive.png",
-        "text": "发布"
-      },
-      {
-        "pagePath": "pages/tabbar/tabbar-4/tabbar-4",
+        "pagePath": "pages/tabbar/cart/cart",
         "iconPath": "static/img/tabbar/news.png",
         "selectedIconPath": "static/img/tabbar/newsactive.png",
         "text": "购物车"
       },
       {
-        "pagePath": "pages/tabbar/tabbar-5/tabbar-5",
+        "pagePath": "pages/tabbar/myinfo/myinfo",
         "iconPath": "static/img/tabbar/me.png",
         "selectedIconPath": "static/img/tabbar/meactive.png",
         "text": "我的"
       }
     ]
-  },
-  "usingComponents": {}
+  }
 }

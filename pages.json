@@ -14,32 +14,16 @@
 			}
 		},
 		{
-			"path": "pages/tabbar/tabbar-3/tabbar-3",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar/tabbar-4/tabbar-4",
+			"path": "pages/tabbar/cart/cart",
 			"style": {
-				"navigationBarTitleText": "购物车",
+				"navigationBarTitleText": "购物车"
 				}
 		},
 		{
-			"path": "pages/tabbar/tabbar-5/tabbar-5",
+			"path": "pages/tabbar/myinfo/myinfo",
 			"style": {
-				"navigationBarTitleText": "我的",
+				"navigationBarTitleText": "我的"
 				}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
-			"style": {}
-		},
-		{
-			"path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
-			"style": {}
 		}
 	],
 		"subPackages": [
@@ -55,18 +39,36 @@
 					
 					}
 
-	            ]
+	                ,{
+                    "path" : "displayphoto/displayphoto",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 			}
 		],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		
+        "usingComponents": {
+			"van-swipe-cell" : "/node_modules/vant/lib/swipe-cell/index",
+			"van-checkbox-group" : "/node_modules/vant/lib/checkbox-group/index",
+			"van-checkbox" : "/node_modules/vant/lib/checkbox/index",
+			"van-submit-bar" : "/node_modules/vant/lib/submit-bar/index",
+			"van-card" : "/node_modules/vant/lib/card/index",
+			"van-button" : "/node_modules/vant/lib/button/index"
+		}
 	},
 	"tabBar": {
-		"borderStyle": "black",
-		"backgroundColor": "#333",
+		"borderStyle": "white",
+		"backgroundColor": "#F8F8F8",
 		"color": "#8F8F94",
 		"selectedColor": "#f33e54",
 		"list": [{
@@ -81,29 +83,14 @@
 				"selectedIconPath": "static/img/tabbar/guanzhuactive.png",
 				"text": "照片"
 			},
-			//#ifdef MP-WEIXIN
 			{
-				"pagePath": "pages/tabbar/tabbar-3/tabbar-3",
-				"iconPath": "static/img/tabbar/add.png",
-				"selectedIconPath": "static/img/tabbar/addactive.png",
-				"text": "发布"
-			},
-			//#endif
-			//#ifndef MP-WEIXIN
-			{
-				"pagePath": "pages/tabbar/tabbar-3/tabbar-3",
-				"iconPath": "static/img/tabbar/add.png",
-				"selectedIconPath": "static/img/tabbar/addactive.png"
-			},
-			//#endif
-			{
-				"pagePath": "pages/tabbar/tabbar-4/tabbar-4",
+				"pagePath": "pages/tabbar/cart/cart",
 				"iconPath": "static/img/tabbar/news.png",
 				"selectedIconPath": "static/img/tabbar/newsactive.png",
 				"text": "购物车"
 			},
 			{
-				"pagePath": "pages/tabbar/tabbar-5/tabbar-5",
+				"pagePath": "pages/tabbar/myinfo/myinfo",
 				"iconPath": "static/img/tabbar/me.png",
 				"selectedIconPath": "static/img/tabbar/meactive.png",
 				"text": "我的"
