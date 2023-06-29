@@ -1,7 +1,7 @@
 <template>
 	<view class="catContent">
 		<!-- 商品卡片栏 -->
-		<view class="cards">
+		<!-- <view class="cards">
 			<view class="checkedStyle">
 				
 				<van-swipe-cell :right-width="65" :name="item.id" :key="item.id" v-for="(item,index) in cardGoodsList">
@@ -22,13 +22,13 @@
 						class="delete-button">删除</van-button>
 				</van-swipe-cell>
 			</view>
-			<!-- 提交订单栏 -->
-			<view class="submitBar">
+			<! 提交订单栏 -->
+<!-- 			<view class="submitBar">
 				<van-submit-bar :price="totalPrice" button-text="提交订单" @submit="onClickButton" :tip="true">
 					<van-checkbox :value="checked" @change="onChange">全选</van-checkbox>
 				</van-submit-bar>
 			</view>
-		</view>
+		</view> -->
 	</view>
 
 </template>

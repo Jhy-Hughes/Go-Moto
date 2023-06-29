@@ -5,10 +5,10 @@
 
 		<swiper class="swiper_back" :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000"
 			circular="true">
-			<swiper-item>
-				<view class="swiper_pic" @tap="clickSwiper()">
+			<swiper-item class="swiper_item" @tap="clickSwiper()">
+				<view class="swiper_pic">
 
-					<text>展示区todo:获取后台表格</text>
+					<text class="txte">展示区todo:获取后台表格</text>
 					<!-- 					<image :src=""> </image> -->
 				</view>
 			</swiper-item>
@@ -26,7 +26,6 @@
 		</view>
 
 
-
 	</view>
 </template>
 
@@ -35,6 +34,7 @@
 		data() {
 
 			return {
+				 rowCount: 10 // 设置行数
 			}
 		},
 		methods: {
@@ -56,14 +56,26 @@
 	.swiper_back {
 		margin-top: 20px;
 		margin-left: 15px;
-		width: 360px;
+		width: 360px; //获取界面
 		height: 120px;
 		border-radius: 10px;
 		box-shadow: 0px 0px 5px 0px lightgray;
+		// display: flex;
+		// justify-content: center;
+		// align-items: center;
 
 	}
 
+	.swiper_item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
 
+	}
+
+	.swiper_pic .txte {}
 
 	.friends_message {
 		justify-content: space-around;
@@ -77,4 +89,5 @@
 		flex-wrap: wrap;
 		margin: 20px;
 	}
+
 </style>

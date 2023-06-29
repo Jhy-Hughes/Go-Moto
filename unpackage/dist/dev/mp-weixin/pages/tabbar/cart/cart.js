@@ -164,74 +164,8 @@ const _sfc_main = {
   mounted() {
   }
 };
-if (!Array) {
-  const _component_van_checkbox = common_vendor.resolveComponent("van-checkbox");
-  const _component_van_checkbox_group = common_vendor.resolveComponent("van-checkbox-group");
-  const _component_van_button = common_vendor.resolveComponent("van-button");
-  const _component_van_card = common_vendor.resolveComponent("van-card");
-  const _component_van_swipe_cell = common_vendor.resolveComponent("van-swipe-cell");
-  const _component_van_submit_bar = common_vendor.resolveComponent("van-submit-bar");
-  (_component_van_checkbox + _component_van_checkbox_group + _component_van_button + _component_van_card + _component_van_swipe_cell + _component_van_submit_bar)();
-}
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return {
-    a: common_vendor.f($data.cardGoodsList, (item, index, i0) => {
-      return {
-        a: item.id,
-        b: "11ebb5c0-2-" + i0 + "," + ("11ebb5c0-1-" + i0),
-        c: common_vendor.p({
-          name: item.id
-        }),
-        d: common_vendor.o($options.onCardChange, item.id),
-        e: "11ebb5c0-1-" + i0 + "," + ("11ebb5c0-0-" + i0),
-        f: item,
-        g: common_vendor.o(($event) => $options.numIncrease(item.id), item),
-        h: "11ebb5c0-4-" + i0 + "," + ("11ebb5c0-3-" + i0),
-        i: item,
-        j: common_vendor.o(($event) => $options.numReduce(item.id), item),
-        k: "11ebb5c0-5-" + i0 + "," + ("11ebb5c0-3-" + i0),
-        l: "11ebb5c0-3-" + i0 + "," + ("11ebb5c0-0-" + i0),
-        m: common_vendor.p({
-          num: item.num,
-          ["origin-price"]: $options.formatPrice(item.oprice),
-          price: $options.formatPrice(item.price),
-          desc: item.desc,
-          title: item.title,
-          thumb: item.thumb
-        }),
-        n: common_vendor.o(($event) => $options.cardDelete(index), item.id),
-        o: "11ebb5c0-6-" + i0 + "," + ("11ebb5c0-0-" + i0),
-        p: item.id,
-        q: "11ebb5c0-0-" + i0,
-        r: common_vendor.p({
-          ["right-width"]: 65,
-          name: item.id
-        })
-      };
-    }),
-    b: common_vendor.p({
-      value: $data.checkBox
-    }),
-    c: common_vendor.p({
-      size: "mini"
-    }),
-    d: common_vendor.p({
-      size: "mini"
-    }),
-    e: common_vendor.p({
-      type: "danger"
-    }),
-    f: common_vendor.o($options.onChange),
-    g: common_vendor.p({
-      value: $data.checked
-    }),
-    h: common_vendor.o($options.onClickButton),
-    i: common_vendor.p({
-      price: $options.totalPrice,
-      ["button-text"]: "提交订单",
-      tip: true
-    })
-  };
+  return {};
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "C:/Users/Administrator.DESKTOP-QKDSGO4/Desktop/app/GO-MOTTO/pages/tabbar/cart/cart.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "C:/Users/Administrator.DESKTOP-QKDSGO4/Desktop/GO-MOTO/pages/tabbar/cart/cart.vue"]]);
 wx.createPage(MiniProgramPage);

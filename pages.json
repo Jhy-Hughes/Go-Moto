@@ -58,12 +58,12 @@
 		"backgroundColor": "#F8F8F8",
 		
         "usingComponents": {
-			"van-swipe-cell" : "/node_modules/vant/lib/swipe-cell/index",
-			"van-checkbox-group" : "/node_modules/vant/lib/checkbox-group/index",
-			"van-checkbox" : "/node_modules/vant/lib/checkbox/index",
-			"van-submit-bar" : "/node_modules/vant/lib/submit-bar/index",
-			"van-card" : "/node_modules/vant/lib/card/index",
-			"van-button" : "/node_modules/vant/lib/button/index"
+			// "van-swipe-cell" : "/node_modules/vant/lib/swipe-cell/index",
+			// "van-checkbox-group" : "/node_modules/vant/lib/checkbox-group/index",
+			// "van-checkbox" : "/node_modules/vant/lib/checkbox/index",
+			// "van-submit-bar" : "/node_modules/vant/lib/submit-bar/index",
+			// "van-card" : "/node_modules/vant/lib/card/index",
+			// "van-button" : "/node_modules/vant/lib/button/index"
 		}
 	},
 	"tabBar": {

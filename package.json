@@ -77,8 +77,6 @@
     }
   },
   "dependencies": {
-    "copy-webpack-plugin": "^5.1.1",
-    "vant": "^4.1.2",
     "vue-proportion-directive": "^1.1.0"
   }
 }

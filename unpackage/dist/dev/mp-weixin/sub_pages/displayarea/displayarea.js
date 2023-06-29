@@ -2,23 +2,35 @@
 const common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
-    return {};
+    return {
+      menu: ["日期", "时间", "地点", "摄影师"]
+      // menu:[]
+    };
   },
   onLoad() {
   },
   methods: {}
 };
-if (!Array) {
-  const _component_slFilter = common_vendor.resolveComponent("slFilter");
-  _component_slFilter();
-}
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.p({
-      themeColor: "themeColor",
-      menuList: "menuList"
+    a: common_vendor.f($data.menu, (column, k0, i0) => {
+      return {
+        a: common_vendor.t(column),
+        b: column
+      };
+    }),
+    b: common_vendor.f($data.menu, (column, k0, i0) => {
+      return {
+        a: common_vendor.f(10, (row, k1, i1) => {
+          return {
+            a: row
+          };
+        }),
+        b: common_vendor.t(column),
+        c: column
+      };
     })
   };
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "C:/Users/Administrator.DESKTOP-QKDSGO4/Desktop/app/GO-MOTTO/sub_pages/displayarea/displayarea.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "C:/Users/Administrator.DESKTOP-QKDSGO4/Desktop/GO-MOTO/sub_pages/displayarea/displayarea.vue"]]);
 wx.createPage(MiniProgramPage);
