@@ -1,41 +1,50 @@
 
-.catContent {
-		width: 100%;
-		height: 100%;
-		margin: 0 auto;
+.shopping-cart {
+  padding: 20px;
 }
-.checkedStyle {
-		width: 100%;
-		height: 90%;
-		margin-left: 5px;
-		margin-bottom: 14%;
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
 }
-.cards {
-		width: 100%;
-		height: 100%;
+.item-image img {
+  width: 100px;
+  height: auto;
 }
-.submitBar {
-		width: 100%;
-		height: 10%;
+.item-details {
+  flex-grow: 1;
+  margin-left: 10px;
 }
-.chengboxs {
-		width: 20px;
-		height: 80px;
-		margin-top: 55px;
-		float: left
+.cart-total {
+  margin-top: 20px;
+  text-align: right;
 }
-.goods-card {
-		width: 92%;
-		float: right;
+.bottom-button{
+	margin-top: 20px;
+	position: absolute;
+	bottom: 10px;
+	display: flex;
+	width: 100%;
 }
-.checkedStyle .van-checkbox__label {
-		width: 100%;
+.input-button{
+	width: 5%;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
 }
-.checkedStyle .van-checkbox {
-		padding-bottom: 5px;
+.cart-buttons {
+  
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
 }
-.checkedStyle van-button .van-button--normal {
-		width: 100%;
-		height: 126px;
+.cart-buttons button {
+  /* margin-left: 10px; */
+  width: 40%;
 }
-
+.input-button input{
+	border: 2px solid #ccc;
+	border-color: antiquewhite;
+	background-color: beige;
+	width: 20px;
+	height: 20px;
+}

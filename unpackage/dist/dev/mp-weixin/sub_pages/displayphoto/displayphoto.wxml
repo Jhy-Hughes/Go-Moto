@@ -1,1 +1,1 @@
-<view><view class="camerist_display"></view><view class="photo_display"><view class="photo_message"><image></image></view></view></view>
+<view><view class="camerist-display"></view><view class="photo-display"><view class="photo-message"><image></image></view></view><view class="shopping-cart"><button class="add-cart" bindtap="{{a}}">加入购物车</button><button class="buy-product" bindtap="{{b}}">购买</button></view></view>

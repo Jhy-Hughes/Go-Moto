@@ -28,14 +28,21 @@
   flex-direction: column;
   border-collapse: collapse;
   margin: 20px;
+  border-radius: 10px;
 }
-.table-header,
+.table-header {
+  display: flex;
+  border: 1px solid #ccc;
+}
 .table-body {
   display: flex;
   border: 1px solid #ccc;
 }
 .table-header view,
 .table-body view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
   padding: 8px;
 }
@@ -48,6 +55,7 @@
 .table-cell {
   flex: 1;
   padding: 8px;
+  display: flex;
   text-align: center;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;

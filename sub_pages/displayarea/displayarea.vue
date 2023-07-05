@@ -5,13 +5,15 @@
 		</view> -->
 		<view class="my-table">
 			<view class="table-header">
-				<view v-for="column in menu" :key="column">{{ column }}</view>
+				<view class="header-body" v-for="column in menu" :key="column">{{ column }}</view>
 			</view>
 
 			<view class="table-body">
 
-				<view class="table-row" v-for="column in menu" :key="column" >
-					<view class="table-cell" v-for="row in 10" :key="row">{{column }}</view>
+				<view class="table-row" v-for="column in menu" :key="column">
+					<view class="table-cell" v-for="row in 10" :key="row">
+						{{column }}
+					</view>
 				</view>
 			</view>
 		</view>
@@ -47,17 +49,32 @@
 		flex-direction: column;
 		border-collapse: collapse;
 		margin: 20px;
+		border-radius: 10px;
+		
 	}
 
-	.table-header,
+	.table-header {
+		display: flex;
+		// justify-content: center;
+		// align-items: center;
+		// flex-direction: row;
+		border: 1px solid #ccc;
+	}
+
 	.table-body {
 		display: flex;
+		// flex-direction: row;
+		// justify-content: center;
+		// align-items: center;
 		// flex-direction: row;
 		border: 1px solid #ccc;
 	}
 
 	.table-header view,
 	.table-body view {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		flex: 1;
 		padding: 8px;
 	}
@@ -69,19 +86,21 @@
 	.table-body view {
 		flex-direction: column;
 	}
-	
-	.table-cell{
-		  flex: 1;
-		  padding: 8px;
-		  text-align: center;
-		  border-right: 1px solid #ccc;
-		  border-bottom: 1px solid #ccc;
+
+	.table-cell {
+		flex: 1;
+		padding: 8px;
+		display: flex;
+		// flex-direction: column;
+		text-align: center;
+		border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
 	}
+
 	// .table-row{
 	// 	flex: 1;
 	// 	padding: 8px;
 	// 	text-align: center;
 	// 	border-right: 1px solid #ccc;
 	// }
-	
 </style>
