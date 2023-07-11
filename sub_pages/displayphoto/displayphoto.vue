@@ -9,8 +9,8 @@
 			</view>
 		</view>
 
-		<view class="shopping-cart"> 
-		<button class="add-cart"  @click="addToCart">加入购物车</button>
+		<view class="shopping-cart">
+			<button class="add-cart" @click="addToCart">加入购物车</button>
 			<button class="buy-product" @click="buy">购买</button>
 		</view>
 
@@ -80,15 +80,17 @@
 		/* padding-left: 2%; */
 		/* padding-right: 10%; */
 		padding-bottom: 20px;
-		
+
 	}
-	.add-cart{
+
+	.add-cart {
 		width: 45%;
 		background-color: chocolate;
 		border-radius: 5px;
-		
+
 	}
-	.buy-product{
+
+	.buy-product {
 		width: 45%;
 		background-color: cadetblue;
 		border-radius: 5px;

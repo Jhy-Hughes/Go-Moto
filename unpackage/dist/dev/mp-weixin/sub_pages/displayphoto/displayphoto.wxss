@@ -33,12 +33,12 @@
 		/* padding-right: 10%; */
 		padding-bottom: 20px;
 }
-.add-cart{
+.add-cart {
 		width: 45%;
 		background-color: chocolate;
 		border-radius: 5px;
 }
-.buy-product{
+.buy-product {
 		width: 45%;
 		background-color: cadetblue;
 		border-radius: 5px;

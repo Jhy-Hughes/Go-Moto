@@ -3,9 +3,24 @@ const common_vendor = require("../../../common/vendor.js");
 const _sfc_main = {
   setup() {
     const cartItems = common_vendor.reactive([
-      { id: 1, name: "商品1", price: 10, image: "product1.jpg" },
-      { id: 2, name: "商品2", price: 15, image: "product2.jpg" },
-      { id: 3, name: "商品3", price: 20, image: "product3.jpg" }
+      {
+        id: 1,
+        name: "商品1",
+        price: 10,
+        image: "product1.jpg"
+      },
+      {
+        id: 2,
+        name: "商品2",
+        price: 15,
+        image: "product2.jpg"
+      },
+      {
+        id: 3,
+        name: "商品3",
+        price: 20,
+        image: "product3.jpg"
+      }
     ]);
     const removeFromCart = (itemId) => {
     };

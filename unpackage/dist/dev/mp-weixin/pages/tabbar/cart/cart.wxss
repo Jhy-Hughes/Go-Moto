@@ -1,50 +1,60 @@
 
 .shopping-cart {
-  padding: 20px;
+		padding: 20px;
 }
 .cart-item {
-  display: flex;
-  margin-bottom: 20px;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
 }
-.item-image img {
-  width: 100px;
-  height: auto;
-}
+
+/* 	.item-image img {
+		width: 100px;
+		height: auto;
+	} */
 .item-details {
-  flex-grow: 1;
-  margin-left: 10px;
+		flex-grow: 1;
+		margin-left: 10px;
 }
 .cart-total {
-  margin-top: 20px;
-  text-align: right;
+		position: absolute;
+		bottom: 60px;
+		text-align: right;
 }
-.bottom-button{
-	margin-top: 20px;
-	position: absolute;
-	bottom: 10px;
-	display: flex;
-	width: 100%;
+.bottom-button {
+		margin-top: 20px;
+		position: absolute;
+		bottom: 10px;
+		display: flex;
+		width: 100%;
 }
-.input-button{
-	width: 5%;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
+.input-button {
+		width: 5%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 }
 .cart-buttons {
-  
-  display: flex;
-  width: 95%;
-  justify-content: space-around;
+
+		display: flex;
+		width: 95%;
+		justify-content: space-around;
+/* 		background-color: aqua; */
 }
 .cart-buttons button {
-  /* margin-left: 10px; */
-  width: 40%;
+		/* margin-left: 10px; */
+		width:35%;
 }
-.input-button input{
-	border: 2px solid #ccc;
-	border-color: antiquewhite;
-	background-color: beige;
-	width: 20px;
-	height: 20px;
+.button-1{
+		background-color: coral;
+}
+.button-2{
+		background-color: crimson;
+}
+.input-button input {
+		border: 2px solid #ccc;
+		border-color: antiquewhite;
+		background-color: beige;
+		width: 20px;
+		height: 20px;
 }
